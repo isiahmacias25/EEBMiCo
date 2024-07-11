@@ -106,17 +106,23 @@ input[type="submit"]:hover {
     max-width: 600px;
     margin: 0 auto;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 100vh; /* Ensure the calendar takes up the full viewport height */
 }
 
 .month-btn {
-    background-color: #000ff;
+    background-color: #0000ff; /* Corrected color value */
     color: white;
     padding: 10px 15px;
     border: none;
     cursor: pointer;
-    width: 33%;
+    width: 33%; /* You can adjust this as needed */
     text-align: center;
-    margin: 5px 0;
+    margin: 5px 0; /* Adjust vertical margin as needed */
+    display: inline-block; /* Ensure buttons are inline-block for stacking */
 }
 
 .month-calendar {
