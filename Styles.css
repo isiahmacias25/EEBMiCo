@@ -57,6 +57,15 @@ body {
     padding-top: 20px; /* Adjust space between content and form */
 }
 
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
 form {
     margin-top: 20px;
 }
