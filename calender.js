@@ -21,4 +21,14 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log('Clicked on day:', button.textContent);
         });
     });
+
+    
+    function toggleCalendar(month) {
+            var calendar = document.getElementById(month + "-calendar");
+            if (calendar.style.display === "none") {
+                calendar.style.display = "block";
+            } else {
+                calendar.style.display = "none";
+            }
+        }
 });
