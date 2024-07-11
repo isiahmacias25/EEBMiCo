@@ -34,23 +34,25 @@ nav ul li a {
 
 body {
     font-family: Arial, sans-serif;
-    background: #800000; /* Dark red background between header and footer */
-    color: #000; /* Black text for readability */
     line-height: 1.6;
 }
 
+.content-wrapper {
+    background: #800000; /* Dark red background between header and content */
+    padding-bottom: 20px; /* Space under the header */
+}
+
 .content {
-    background: #fff; /* White background for content area */
+    background: #fff; /* White background for content */
     padding: 20px;
+    margin: auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .container {
-    max-width: 600px;
-    margin: auto;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-top: 20px; /* Adjust space between content and form */
 }
 
 form {
@@ -81,4 +83,17 @@ input[type="submit"] {
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
-    cursor:
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
