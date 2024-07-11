@@ -122,6 +122,10 @@ input[type="submit"]:hover {
     margin: 5px 0; /* Adjust vertical margin as needed */
 }
 
+.month-btn:hover {
+    background-color: #000099; /* Darker shade on hover */
+}
+
 .month-calendar {
     display: none;
     padding: 10px;
