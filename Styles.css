@@ -107,10 +107,9 @@ input[type="submit"]:hover {
     margin: 0 auto;
     font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack items vertically */
     justify-content: center; /* Center items vertically */
     align-items: center; /* Center items horizontally */
-    height: 100vh; /* Ensure the calendar takes up the full viewport height */
 }
 
 .month-btn {
@@ -122,7 +121,6 @@ input[type="submit"]:hover {
     width: 33%; /* You can adjust this as needed */
     text-align: center;
     margin: 5px 0; /* Adjust vertical margin as needed */
-    display: inline-block; /* Ensure buttons are inline-block for stacking */
 }
 
 .month-calendar {
