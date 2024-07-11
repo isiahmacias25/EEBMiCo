@@ -61,6 +61,12 @@ nav ul li a {
     border-radius: 5px;
 }
 
+form {
+    background-color: #ffffff; /* Example form background color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Example box shadow */
+}
 footer {
     background: #333;
     color: #fff;
