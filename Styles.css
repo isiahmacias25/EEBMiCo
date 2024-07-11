@@ -102,6 +102,42 @@ input[type="submit"]:hover {
     background-color: #45a049;
 }
 
+.calendar {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.month-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    margin: 5px 0;
+}
+
+.month-calendar {
+    display: none;
+    padding: 10px;
+}
+
+.month-calendar.active {
+    display: block;
+}
+
+.day-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin: 2px;
+    display: inline-block;
+}
+
 footer {
     background: #333;
     color: #fff;
