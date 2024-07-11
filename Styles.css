@@ -47,7 +47,7 @@ body {
     background: #fff; /* White background for content */
     padding: 20px;
     margin: auto;
-    color: black
+    color: black;
     max-width: 600px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
