@@ -37,22 +37,11 @@ body {
     background: #800000; /* Dark red background between header and footer */
     color: #000; /* Black text for readability */
     line-height: 1.6;
-    margin-bottom: 20px; /* Adjust margin to create space under footer */
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #fff;
-    color: #007bff; /* Blue color for normal state */
-    text-decoration: none;
-    border-radius: 5px;
-    border: 2px solid #f00; /* Red border */
-}
-
-.btn:hover {
-    background: #007bff; /* Blue background on hover */
-    color: #fff; /* White text on hover */
+.content {
+    background: #fff; /* White background for content area */
+    padding: 20px;
 }
 
 .container {
@@ -92,23 +81,4 @@ input[type="submit"] {
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-input[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-/* Reverting to previous footer style */
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-.error-message {
-    color: #f00; /* Red text for error messages */
-    font-weight: bold;
-}
+    cursor:
