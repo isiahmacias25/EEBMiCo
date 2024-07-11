@@ -121,7 +121,7 @@ input[type="submit"]:hover {
     cursor: pointer;
     width: 33%; /* You can adjust this as needed */
     text-align: center;
-    margin: 50px 0; /* Adjust vertical margin as needed */
+    margin: 5px 0; /* Adjust vertical margin as needed */
     display: inline-block; /* Ensure buttons are inline-block for stacking */
 }
 
