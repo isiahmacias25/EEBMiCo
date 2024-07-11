@@ -102,47 +102,49 @@ input[type="submit"]:hover {
 }
 
 .calendar {
-    max-width: 600px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.month-btn {
-    background-color: #0000ff; /* Corrected color value */
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    width: 33%; /* You can adjust this as needed */
-    text-align: center;
-    margin: 5px 0; /* Adjust vertical margin as needed */
-}
-
-.month-btn:hover {
-    background-color: #000099; /* Darker shade on hover */
-}
-
-.month-calendar {
-    display: none;
-    padding: 10px;
-}
-
-.month-calendar.active {
-    display: block;
-}
-
-.day-btn {
+.month {
     background-color: #f0f0f0;
-    color: #333;
-    padding: 5px 10px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px);
+    text-align: center;
+}
+
+.month-name {
+    margin-bottom: 10px;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    background-color: #fff;
     border: 1px solid #ccc;
-    cursor: pointer;
-    margin: 2px;
-    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+    .month {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .month {
+        width: calc(100% - 20px);
+    }
 }
 
 footer {
