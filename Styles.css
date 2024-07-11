@@ -40,6 +40,7 @@ body {
 .content-wrapper {
     background: #800000; /* Dark red background between header and content */
     padding-bottom: 20px; /* Space under the header */
+    color: white;
 }
 
 .content {
