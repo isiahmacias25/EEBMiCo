@@ -1,4 +1,3 @@
-// Wait for the DOM to fully load before executing any JavaScript
 document.addEventListener("DOMContentLoaded", function() {
     // Get all month buttons and add click event listeners to each
     const monthButtons = document.querySelectorAll('.month-btn');
@@ -17,18 +16,21 @@ document.addEventListener("DOMContentLoaded", function() {
     const dayButtons = document.querySelectorAll('.day-btn');
     dayButtons.forEach(function(button) {
         button.addEventListener('click', function() {
-            // You can handle what happens when a day button is clicked here
+            // Log the clicked day button's text content
             console.log('Clicked on day:', button.textContent);
         });
     });
 
-    
+    // Function to toggle calendar visibility based on month
     function toggleCalendar(month) {
-            var calendar = document.getElementById(month + "-calendar");
-            if (calendar.style.display === "none") {
-                calendar.style.display = "block";
-            } else {
-                calendar.style.display = "none";
-            }
+        var calendar = document.getElementById(month + "-calendar");
+        if (calendar.style.display === "none") {
+            calendar.style.display = "block";
+        } else {
+            calendar.style.display = "none";
         }
+    }
+
+    // Example of how to call toggleCalendar
+    // toggleCalendar("january");
 });
