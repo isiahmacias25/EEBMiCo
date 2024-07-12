@@ -9,6 +9,11 @@ document.addEventListener("DOMContentLoaded", function() {
             // Toggle display of corresponding month-calendar div
             const monthCalendar = button.nextElementSibling;
             monthCalendar.classList.toggle('active');
+            if (monthCalendar.style.display === "none" || monthCalendar.style.display === "") {
+                monthCalendar.style.display = "block";
+            } else {
+                monthCalendar.style.display = "none";
+            }
         });
     });
 
@@ -20,17 +25,4 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log('Clicked on day:', button.textContent);
         });
     });
-
-    // Function to toggle calendar visibility based on month
-    function toggleCalendar(month) {
-        var calendar = document.getElementById(month + "-calendar");
-        if (calendar.style.display === "none") {
-            calendar.style.display = "block";
-        } else {
-            calendar.style.display = "none";
-        }
-    }
-
-    // Example of how to call toggleCalendar
-    // toggleCalendar("january");
 });
