@@ -37,13 +37,13 @@ body {
 }
 
 .content-wrapper {
-    background: #800000; /* Dark red background between header and content */
-    padding-bottom: 20px; /* Space under the header */
+    background: #800000;
+    padding-bottom: 20px;
     color: white;
 }
 
 .content {
-    background: #fff; /* White background for content */
+    background: #fff;
     padding: 20px;
     margin: auto;
     color: black;
@@ -53,7 +53,7 @@ body {
 }
 
 .container {
-    padding-top: 20px; /* Adjust space between content and form */
+    padding-top: 20px;
 }
 
 .btn {
@@ -63,42 +63,6 @@ body {
     color: #007bff;
     text-decoration: none;
     border-radius: 5px;
-}
-
-form {
-    margin-top: 20px;
-}
-
-label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"] {
-    width: calc(100% - 20px); /* Adjusted width to fit within the container */
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-
-input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-input[type="submit"]:hover {
-    background-color: #45a049;
 }
 
 .calendar {
@@ -117,31 +81,16 @@ input[type="submit"]:hover {
     margin-bottom: 10px;
 }
 
-.calendar {
-    margin-top: 20px;
-}
-
-.month-btn {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
 .month-calendar {
     display: none;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .month-calendar.visible {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
 }
-
 
 .day-btn {
     padding: 20px;
