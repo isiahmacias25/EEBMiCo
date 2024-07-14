@@ -53,12 +53,28 @@ document.addEventListener("DOMContentLoaded", function() {
         december: 6
     };
 
-    function toggleCalendar(month) {
-        const calendar = document.getElementById(`${month}-calendar`);
-        calendar.classList.toggle('visible');
+  function toggleCalendar(month) {
+    const calendar = document.getElementById(`${month}-calendar`);
+    
+    // Toggle visibility
+    calendar.classList.toggle('visible');
 
-        // If the calendar is already populated, no need to populate again
-        if (calendar.childElementCount > 0) return;
+    // If the calendar is already populated, no need to populate again
+    if (calendar.childElementCount > 0) return;
 
-        // Add empty spaces for days before the start of the month
-        const emptySpaces = startDayOfMonth[
+    // Add empty spaces for days before the start of the month
+    const emptySpaces = startDayOfMonth[month] - 1;
+    for (let i = 0; i < emptySpaces; i++) {
+        const emptyDiv = document.createElement('div');
+        emptyDiv.className = 'empty-day';
+        calendar.appendChild(emptyDiv);
+    }
+
+    // Add actual days of the month
+    for (let day = 1; day <= daysInMonth[month]; day++) {
+        const dayBtn = document.createElement('button');
+        dayBtn.className = 'day-btn';
+        dayBtn.textContent = day;
+        calendar.appendChild(dayBtn);
+    }
+}
