@@ -1,3 +1,6 @@
+console.log("JavaScript Loaded");
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const daysInMonth = {
         january: 31,
