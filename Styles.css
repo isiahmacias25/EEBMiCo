@@ -107,16 +107,6 @@ input[type="submit"]:hover {
     justify-content: space-around;
 }
 
-.month {
-    background-color: #f0f0f0;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    width: calc(33.33% - 20px);
-    text-align: center;
-}
-
 .month-btn {
     background-color: #0000ff;
     color: white;
