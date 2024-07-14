@@ -3,21 +3,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const monthButtons = document.querySelectorAll('.month-btn');
     monthButtons.forEach(function(button) {
         button.addEventListener('click', function() {
-            // Toggle active class for the clicked month button
-            button.classList.toggle('active');
-            
-            // Toggle display of corresponding month-calendar div
+            // Toggle visibility of the corresponding month-calendar div
             const monthCalendar = button.nextElementSibling;
-            monthCalendar.classList.toggle('visible');
-        });
-    });
-    
-     Get all day buttons and add click event listeners to each
-    const dayButtons = document.querySelectorAll('.day-btn');
-    dayButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            // Log the clicked day button's text content
-            console.log('Clicked on day:', button.textContent);
+            if (monthCalendar.classList.contains('visible')) {
+                monthCalendar.classList.remove('visible');
+            } else {
+                monthCalendar.classList.add('visible');
+            }
         });
     });
 
@@ -37,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
         december: 31
     };
 
-    // Starting days for each month in 2024 (e.g., Jan 1, 2024 is a Monday)
+    // Starting days for each month in 2024
     const startDayOfMonth = {
         january: 1,
         february: 4,
@@ -53,28 +45,30 @@ document.addEventListener("DOMContentLoaded", function() {
         december: 6
     };
 
-  function toggleCalendar(month) {
-    const calendar = document.getElementById(`${month}-calendar`);
-    
-    // Toggle visibility
-    calendar.classList.toggle('visible');
+    function toggleCalendar(month) {
+        const calendar = document.getElementById(`${month}-calendar`);
+        if (!calendar) return; // Exit if the calendar element is not found
 
-    // If the calendar is already populated, no need to populate again
-    if (calendar.childElementCount > 0) return;
+        // If the calendar is already populated, no need to populate again
+        if (calendar.childElementCount === 0) {
+            // Add empty spaces for days before the start of the month
+            const emptySpaces = startDayOfMonth[month] - 1;
+            for (let i = 0; i < emptySpaces; i++) {
+                const emptyDiv = document.createElement('div');
+                emptyDiv.className = 'empty-day';
+                calendar.appendChild(emptyDiv);
+            }
 
-    // Add empty spaces for days before the start of the month
-    const emptySpaces = startDayOfMonth[month] - 1;
-    for (let i = 0; i < emptySpaces; i++) {
-        const emptyDiv = document.createElement('div');
-        emptyDiv.className = 'empty-day';
-        calendar.appendChild(emptyDiv);
+            // Add actual days of the month
+            for (let day = 1; day <= daysInMonth[month]; day++) {
+                const dayBtn = document.createElement('button');
+                dayBtn.className = 'day-btn';
+                dayBtn.textContent = day;
+                calendar.appendChild(dayBtn);
+            }
+        }
     }
 
-    // Add actual days of the month
-    for (let day = 1; day <= daysInMonth[month]; day++) {
-        const dayBtn = document.createElement('button');
-        dayBtn.className = 'day-btn';
-        dayBtn.textContent = day;
-        calendar.appendChild(dayBtn);
-    }
-}
+    // Make sure to initialize calendars when the document is loaded
+    // For example, you can call toggleCalendar('january') here if you want to prepopulate
+});
