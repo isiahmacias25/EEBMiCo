@@ -134,14 +134,14 @@ input[type="submit"]:hover {
 
 .month-calendar {
     display: none;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-    margin-bottom: 20px;
 }
 
 .month-calendar.visible {
     display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
 }
+
 
 .day-btn {
     padding: 20px;
