@@ -11,6 +11,15 @@ document.addEventListener("DOMContentLoaded", function() {
             monthCalendar.classList.toggle('visible');
         });
     });
+    
+     Get all day buttons and add click event listeners to each
+    const dayButtons = document.querySelectorAll('.day-btn');
+    dayButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            // Log the clicked day button's text content
+            console.log('Clicked on day:', button.textContent);
+        });
+    });
 
     // Days in each month
     const daysInMonth = {
